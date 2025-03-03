@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ICV娛樂</title>
+    <meta property="og:title" content="ICV娛樂" />
+    <meta name="description" content="ICV娛樂2024最佳遊戲體驗首選。" />
+  </head>
+  <body></body>
+</html>
+
+<script>
+  function go() {
+    const urlOrigin = window.location.origin;
+
+    // 获取当前路径
+    const urlPath = window.location.pathname;
+
+    // 删除 /promotion/ 部分
+    const newPath = urlPath.replace("/promotion/", "/");
+    const urlSearch = window.location.search;
+    const url = `${urlOrigin}${newPath}#/login${urlSearch}`;
+    console.log(url);
+    window.open(url, "_self");
+  }
+  go();
+</script>

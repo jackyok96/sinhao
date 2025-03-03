@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ICV娛樂</title>
+    <meta property="og:title" content="ICV娛樂｜全台好評推薦的娛樂平台" />
+    <meta name="description" content="ICV娛樂2024最佳遊戲體驗首選。" />
+  </head>
+  <body></body>
+</html>
+
+<script>
+  function go() {
+    const urlOrigin = window.location.origin;
+
+    // 获取当前路径
+    const main = /main/;
+    const Discount = /Discount/;
+    const ShareMakeFortunePage = /ShareMakeFortunePage/;
+    const APPDownload = /APPDownload/;
+    const urlPath = window.location.pathname;
+
+    // 删除 /promotion/ 部分
+    const newPath = urlPath.replace("/line/", "/");
+    const urlSearch = window.location.search;
+    switch (true) {
+      case main.test(urlSearch):
+        url = `${urlOrigin}${newPath}#/main`;
+        break;
+      case Discount.test(urlSearch):
+        url = `${urlOrigin}${newPath}#/Discount`;
+        break;
+      case ShareMakeFortunePage.test(urlSearch):
+        url = `${urlOrigin}${newPath}#/member/ShareMakeFortunePage`;
+        break;
+      case APPDownload.test(urlSearch):
+        url = `${urlOrigin}${newPath}#/APPDownload`;
+        break;
+    }
+    console.log(url);
+    window.open(url, "_self");
+  }
+  go();
+</script>
